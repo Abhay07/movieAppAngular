@@ -53,7 +53,7 @@ export class MovieListComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-      fetch("http://www.omdbapi.com/?apikey=a567cf6c&s=love&type=movie")
+      fetch("https://www.omdbapi.com/?apikey=a567cf6c&s=love&type=movie")
       .then(res => res.json())
       .then((res)=>{
         this.movies = res.Search;
