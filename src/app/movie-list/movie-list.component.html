@@ -1,0 +1,22 @@
+<div>
+	<div class="flex table-header">
+		<div>Poster</div>
+		<div (click)="sort('name')">
+			Title 
+			<span class="arrow-up"></span>
+			<span class="arrow-down"></span>
+		</div>
+		<div (click)="sort('year')">
+			Year
+			<span class="arrow-up"></span>
+			<span class="arrow-down"></span>
+		</div>
+	</div>
+	<div *ngFor="let mov of movies" class="flex row">
+		<div>
+			<img src={{mov.Poster}} class="poster"/>
+		</div>
+		<div>{{mov.Title}}</div>
+		<div>{{mov.Year}}</div>
+	</div>
+</div>
